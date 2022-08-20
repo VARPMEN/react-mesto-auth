@@ -1,0 +1,104 @@
+.element {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.element__container {
+  padding: 22px 20px 22px 21px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.element__counter-likes {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.21;
+}
+.element__delete-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  padding: 0;
+  border: none;
+  background-color: unset;
+
+  cursor: pointer;
+  transition: opacity 0.4s ease-in;
+}
+
+.element__like-btn {
+  padding: 0;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  transition: opacity 0.4s ease-in;
+}
+
+.element__delete-btn:hover {
+  opacity: 0.5;
+}
+
+.element__delete-btn_inactive {
+  display: none;
+}
+
+.element__delete-btn-icon {
+  object-fit: cover;
+}
+.element__image {
+  object-fit: cover;
+  height: 282px;
+}
+
+.element__image:hover {
+  cursor: pointer;
+}
+
+.element__like-btn {
+  padding: 0;
+  margin-bottom: 3px;
+  border: none;
+  background-image: url(../../images/heart.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: opacity 0.4s ease-in;
+  width: 22px;
+  height: 19px;
+  align-self: flex-end;
+}
+
+.element__like-btn:hover {
+  opacity: 0.5;
+}
+
+.element__like-btn_active {
+  background-image: url(../../images/heart_active.svg);
+}
+
+.element__like-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.element__name {
+  margin: 0;
+  max-width: 70%;
+
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.2;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

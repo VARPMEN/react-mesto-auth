@@ -1,0 +1,18 @@
+.fullscreen-image {
+  position: relative;
+}
+
+.fullscreen-image__caption {
+  margin: 10px 0 0 0;
+  color: #fff;
+  font-weight: 400;
+  size: 12px;
+  line-height: 14.52px;
+}
+
+.fullscreen-image__picture {
+  max-width: 75vw;
+  max-height: 75vh;
+  object-fit: contain;
+  object-position: center;
+}
