@@ -1,11 +1,11 @@
 import "./styles/SignStyles.css";
 
-function Login() {
+function Register() {
   return (
     <section className="sign">
       <form className="sign__form">
         <div>
-          <h2 className="sign__title">Вход</h2>
+          <h2 className="sign__title">Регистрация</h2>
           <input
             className="sign__input"
             name="email"
@@ -21,12 +21,18 @@ function Login() {
             required
           ></input>
         </div>
-        <button className="sign__button" type="submit">
-          Войти
-        </button>
+        <div>
+          <button
+            className="sign__button sign__button_type-register"
+            type="submit"
+          >
+            Зарегистрироваться
+          </button>
+          <p className="sign__signup">Уже зарегистрированы? Войти</p>
+        </div>
       </form>
     </section>
   );
 }
 
-export default Login;
+export default Register;

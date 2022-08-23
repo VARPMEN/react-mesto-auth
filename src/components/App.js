@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import "./styles/App.css";
 import Header from "./Header";
 import Login from "./Login";
+import Register from "./Register";
 import Main from "./Main";
 import Footer from "./Footer";
 import PopupWithForm from "./PopupWithForm";
@@ -122,7 +123,9 @@ function App() {
           <Route path="/sign-in">
             <Login />
           </Route>
-          {/*<Route path="/sign-up"></Route> */}
+          <Route path="/sign-up">
+            <Register />
+          </Route>
           <Main
             onAddPlace={handleAddPlaceClick}
             onEditProfile={handleEditProfileClick}

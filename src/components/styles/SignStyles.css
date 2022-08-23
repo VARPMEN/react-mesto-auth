@@ -1,16 +1,16 @@
-.login {
+.sign {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.login__title {
+.sign__title {
   margin: 20px 0 50px 0;
   color: #fff;
   text-align: center;
 }
 
-.login__form {
+.sign__form {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 160px);
@@ -19,7 +19,7 @@
   width: 100%;
 }
 
-.login__input {
+.sign__input {
   color: #ccc;
   padding: 0 0 10px 0;
   border: unset;
@@ -28,20 +28,31 @@
   width: 100%;
 }
 
-.login__input:focus {
+.sign__input:focus {
   outline: unset;
 }
 
-.login__input:last-child {
+.sign__input:last-child {
   margin-top: 30px;
 }
 
-.login__button {
+.sign__button {
   padding: 0;
   margin-bottom: 112px;
   width: 100%;
   padding: 14px 0 14px 0;
   font-size: 18px;
   line-height: 1.22;
-  justify-self: flex-end;
+}
+
+.sign__button_type-register {
+  margin-bottom: 15px;
+}
+
+.sign__signup {
+  margin: 0 0 80px 0;
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.21;
 }
