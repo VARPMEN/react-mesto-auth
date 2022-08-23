@@ -13,8 +13,10 @@ import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import AddPlacePopup from "./AddPlacePopup";
+import ProtectedRoute from "./ProtectedRoute";
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(true);
   const [currentUser, setCurrentUser] = useState({});
   const [cards, setCards] = useState([]);
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
@@ -126,7 +128,11 @@ function App() {
           <Route path="/sign-up">
             <Register />
           </Route>
-          <Main
+          <ProtectedRoute
+            exact
+            path="/"
+            component={Main}
+            loggedIn={loggedIn}
             onAddPlace={handleAddPlaceClick}
             onEditProfile={handleEditProfileClick}
             onEditAvatar={handleEditAvatarClick}
