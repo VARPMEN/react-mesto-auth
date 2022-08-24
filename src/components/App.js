@@ -14,11 +14,13 @@ import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import AddPlacePopup from "./AddPlacePopup";
 import ProtectedRoute from "./ProtectedRoute";
+import InfoTooltip from "./InfoTooltip";
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState({});
   const [cards, setCards] = useState([]);
+  const [isInfoTooltipOpen, setIsInfoTooltipOpen] = useState(false);
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false);
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
@@ -72,6 +74,10 @@ function App() {
     setIsEditProfilePopupOpen(true);
   }
 
+  function handleIntoTooltip() {
+    setIsInfoTooltipOpen(true);
+  }
+
   function handleUpdateUser(data) {
     api
       .setUserInfo(data)
@@ -110,6 +116,7 @@ function App() {
     setIsEditAvatarPopupOpen(false);
     setIsEditProfilePopupOpen(false);
     setIsAddPlacePopupOpen(false);
+    setIsInfoTooltipOpen(false);
     setSelectedCard(null);
   }
 
@@ -165,6 +172,11 @@ function App() {
           onClose={closeAllPopups}
         />
         <ImagePopup card={selectedCard} onClose={closeAllPopups} />
+        <InfoTooltip
+          title="Вы успешно зарегистрировались!"
+          onClose={closeAllPopups}
+          isOpen={isInfoTooltipOpen}
+        />
       </div>
     </CurrentUserContext.Provider>
   );

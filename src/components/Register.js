@@ -1,4 +1,5 @@
 import "./styles/SignStyles.css";
+import { Link } from "react-router-dom";
 
 function Register() {
   return (
@@ -28,7 +29,9 @@ function Register() {
           >
             Зарегистрироваться
           </button>
-          <p className="sign__signup">Уже зарегистрированы? Войти</p>
+          <Link to="/sign-in" className="sign__link">
+            <p className="sign__signup">Уже зарегистрированы? Войти</p>
+          </Link>
         </div>
       </form>
     </section>

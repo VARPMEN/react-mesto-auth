@@ -44,10 +44,20 @@
   padding: 14px 0 14px 0;
   font-size: 18px;
   line-height: 1.22;
+  cursor: pointer;
+  transition: opacity 0.4s ease-in;
+}
+
+.sign__button:hover {
+  opacity: 0.85;
 }
 
 .sign__button_type-register {
   margin-bottom: 15px;
+}
+
+.sign__link {
+  text-decoration: none;
 }
 
 .sign__signup {
@@ -56,4 +66,10 @@
   color: #ccc;
   font-size: 14px;
   line-height: 1.21;
+  cursor: pointer;
+  transition: opacity 0.4s ease-in;
+}
+
+.sign__signup:hover {
+  opacity: 0.6;
 }
