@@ -1,12 +1,14 @@
-import "./styles/Footer.css";
+import { Route } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="footer container">
-      <p className="footer__copyright">
-        &copy; {new Date().getFullYear()} Mesto Russia
-      </p>
-    </footer>
+    <Route exact path="/">
+      <footer className="footer container">
+        <p className="footer__copyright">
+          &copy; {new Date().getFullYear()} Mesto Russia
+        </p>
+      </footer>
+    </Route>
   );
 }
 

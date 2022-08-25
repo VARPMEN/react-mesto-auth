@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import "./styles/Card.css";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import deleteBtnIcon from "../images/delete-btn-icon.svg";
 

@@ -1,6 +1,5 @@
-import { Link, useLocation, withRouter } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../images/logo.svg";
-import "./styles/Header.css";
 
 function Header({ isLoggedIn, email, onClick }) {
   const location = useLocation();
@@ -33,4 +32,4 @@ function Header({ isLoggedIn, email, onClick }) {
     </header>
   );
 }
-export default withRouter(Header);
+export default Header;

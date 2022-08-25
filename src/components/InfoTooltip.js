@@ -1,5 +1,3 @@
-import "./styles/PopupWithForm.css";
-import "./styles/InfoTooltip.css";
 import closeIcon from "../images/close-icon.svg";
 import successIcon from "../images/success-pic.svg";
 import failureIcon from "../images/failure-pic.svg";
@@ -26,6 +24,7 @@ function InfoTooltip({ onClose, isOpen, isSuccess }) {
         <img
           className="info-tool__image"
           src={isSuccess ? successIcon : failureIcon}
+          alt={isSuccess ? "Успешно" : "Неудачно"}
         />
         <h2 className="popup__title info-tool__title">
           {isSuccess

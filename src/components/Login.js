@@ -1,4 +1,3 @@
-import "./styles/SignStyles.css";
 import { useState } from "react";
 
 function Login({ onAuthtorize }) {

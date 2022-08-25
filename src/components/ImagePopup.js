@@ -1,6 +1,4 @@
 import closeIcon from "../images/close-icon.svg";
-import "./styles/PopupWithForm.css";
-import "./styles/ImagePopup.css";
 
 function ImagePopup({ card, onClose }) {
   return (

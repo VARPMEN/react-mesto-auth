@@ -1,6 +1,5 @@
 import React from "react";
 import closeIcon from "../images/close-icon.svg";
-import "./styles/PopupWithForm.css";
 
 function PopupWithForm({
   title,

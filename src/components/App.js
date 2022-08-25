@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
-import "./styles/App.css";
 import Header from "./Header";
 import Login from "./Login";
 import Register from "./Register";
@@ -50,7 +49,7 @@ function App() {
     auth
       .authorize(password, email)
       .then((token) => {
-        auth.getContent(token).then((res) => {
+        auth.checkToken(token).then((res) => {
           setEmail(res.data.email);
           setLoggedIn(true);
           history.push("/");
@@ -68,7 +67,7 @@ function App() {
 
     if (jwt) {
       auth
-        .getContent(jwt)
+        .checkToken(jwt)
         .then((res) => {
           if (res) {
             setLoggedIn(true);
